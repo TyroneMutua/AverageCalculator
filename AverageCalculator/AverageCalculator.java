@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class AverageCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int totalMarks = 0;
+        int numberOfUnits = 5;
+
+        System.out.println("Enter the marks for each unit:");
+
+        for (int i = 1; i <= numberOfUnits; i++) {
+            System.out.print("Unit " + i + ": ");
+            int marks = scanner.nextInt();
+            totalMarks += marks;
+        }
+
+        double average = (double) totalMarks / numberOfUnits;
+        System.out.printf("Average marks: %.2f%n", average);
+    }
+}
